@@ -12,7 +12,7 @@ import java.time.Duration;
 
 public class LoginTest {
 
-    private String id = "4130162";
+    private String id = "5782208";
     ChromeDriver chrome;
     @BeforeEach
     public void openBrowser(){
@@ -27,15 +27,15 @@ public class LoginTest {
     public void verifySomeThing() throws InterruptedException {
         chrome.findElement(By.xpath("//img[@src=\"/Images/design/pagelogin.png\"]")).click();
         // set email
-        chrome.findElement(By.id("ctl00_MainContent_LoginControl1_TextBoxEmail")).sendKeys("lutyvr02@gmail.com");
+        chrome.findElement(By.id("ctl00_MainContent_LoginControl1_TextBoxEmail")).sendKeys("lagu@gmail.com");
         // set password
-        chrome.findElement(By.id("ctl00_MainContent_LoginControl1_TextBoxPassword")).sendKeys("hola1234");
+        chrome.findElement(By.id("ctl00_MainContent_LoginControl1_TextBoxPassword")).sendKeys("12345678");
         // click login
         chrome.findElement(By.id("ctl00_MainContent_LoginControl1_ButtonLogin")).click();
         // verificar si existe el control del logout
         chrome.findElement(By.className("AddProjectLiDiv")).click();
         Thread.sleep(1000);
-        chrome.findElement(By.className("InputTextAddProj")).sendKeys("hola1234");
+        chrome.findElement(By.className("InputTextAddProj")).sendKeys("12345678");
         Thread.sleep(1000);
         chrome.findElement(By.id("NewProjNameButton")).click();
         Thread.sleep(1000);
@@ -52,7 +52,7 @@ public class LoginTest {
         Thread.sleep(1000);
         WebElement editTextbox = chrome.findElement(By.id("ItemEditTextbox"));
         editTextbox.clear();
-        editTextbox.sendKeys("Luciano");
+        editTextbox.sendKeys("Lagunator");
         Thread.sleep(1000);
         WebElement saveButton = chrome.findElement(By.id("ItemEditSubmit"));
         saveButton.click();
